@@ -5,6 +5,9 @@ import { GenericMigrationStep } from './migrate'
 export interface MigrationState {
   readonly v3CoreFactoryAddress?: string
   readonly swapRouter02?: string
+  readonly unsupportedProtocolAddress?: string
+  readonly permit2Address?: string
+  readonly universalRouterAddress?: string
   readonly nftDescriptorLibraryAddressV1_3_0?: string
   readonly nonfungibleTokenPositionDescriptorAddressV1_3_0?: string
   readonly descriptorProxyAddress?: string
@@ -25,7 +28,7 @@ export type MigrationConfig = {
   gasPrice: BigNumber | undefined
   weth9Address: string
   nativeCurrencyLabelBytes: string
-  v2CoreFactoryAddress: string
+  v2CoreFactoryAddress: string | undefined
   ownerAddress: string
 }
 

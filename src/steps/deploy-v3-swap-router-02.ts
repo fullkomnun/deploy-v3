@@ -1,5 +1,6 @@
 import SwapRouter02 from '@uniswap/swap-router-contracts/artifacts/contracts/SwapRouter02.sol/SwapRouter02.json'
 import createDeployContractStep from './meta/createDeployContractStep'
+import { AddressZero } from '@ethersproject/constants'
 
 export const DEPLOY_V3_SWAP_ROUTER_02 = createDeployContractStep({
   key: 'swapRouter02',
@@ -13,7 +14,7 @@ export const DEPLOY_V3_SWAP_ROUTER_02 = createDeployContractStep({
     }
 
     return [
-      config.v2CoreFactoryAddress,
+      config.v2CoreFactoryAddress ?? AddressZero,
       state.v3CoreFactoryAddress,
       state.nonfungibleTokenPositionManagerAddress,
       config.weth9Address,

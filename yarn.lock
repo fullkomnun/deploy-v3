@@ -374,6 +374,11 @@
   resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-3.4.1-solc-0.7-2.tgz#371c67ebffe50f551c3146a9eec5fe6ffe862e92"
   integrity sha512-tAG9LWg8+M2CMu7hIsqHPaTyG4uDzjr6mhvH96LvOpLZZj6tgzTluBt+LsCf1/QaYrlis6pITvpIaIhE+iZB+Q==
 
+"@openzeppelin/contracts@4.7.0":
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.7.0.tgz#3092d70ea60e3d1835466266b1d68ad47035a2d5"
+  integrity sha512-52Qb+A1DdOss8QvJrijYYPSf32GUg2pGaG/yCxtaA3cu4jduouTdg4XZSMLW9op54m1jH7J8hoajhHKOPsoJFw==
+
 "@types/bn.js@^4.11.3":
   version "4.11.6"
   resolved "https://registry.yarnpkg.com/@types/bn.js/-/bn.js-4.11.6.tgz#c306c70d9358aaea33cd4eda092a742b9505967c"
@@ -444,6 +449,15 @@
     "@uniswap/v3-periphery" "1.3.0"
     hardhat-watcher "^2.1.1"
 
+"@uniswap/universal-router@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@uniswap/universal-router/-/universal-router-1.4.1.tgz#87a8fa70445091807f060f33cdb22228cfbaa16f"
+  integrity sha512-mUNBPk+fLl1PXwOwqaaYykEd7UN5fDRLVj4tjSmOxI9vYlc6yPHHvuXOOYbnAhGpoRv4Xp/QYxjzeuYCgCJ/+w==
+  dependencies:
+    "@openzeppelin/contracts" "4.7.0"
+    "@uniswap/v2-core" "1.0.1"
+    "@uniswap/v3-core" "1.0.0"
+
 "@uniswap/v2-core@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@uniswap/v2-core/-/v2-core-1.0.1.tgz#af8f508bf183204779938969e2e54043e147d425"
@@ -466,7 +480,7 @@
     base64-sol "1.0.1"
     hardhat-watcher "^2.1.1"
 
-"@uniswap/v3-periphery@1.3.0", "v3-periphery-1_3_0@npm:@uniswap/v3-periphery@1.3.0":
+"@uniswap/v3-periphery@1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@uniswap/v3-periphery/-/v3-periphery-1.3.0.tgz#37f0a1ef6025221722e50e9f3f2009c2d5d6e4ec"
   integrity sha512-HjHdI5RkjBl8zz3bqHShrbULFoZSrjbbrRHoO2vbzn+WRzTa6xY4PWphZv2Tlcb38YEKfKHp6NPl5hVedac8uw==
@@ -1476,6 +1490,11 @@ pbkdf2@^3.0.17:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+"permit2@npm:@fullkomnun/permit2@1.0.0":
+  version "1.0.0"
+  resolved "https://npm.pkg.github.com/download/@fullkomnun/permit2/1.0.0/17a11ea492a4cc3f47a27323a80849a373b6e230#17a11ea492a4cc3f47a27323a80849a373b6e230"
+  integrity sha512-1mpnagszVIAVAULQdEmKiZpiZcG7z4rzoGcoKas4rPkcMOCPThinI4EGAF8XR9PDX+QtyJy6J83V/zxVZx8tEA==
+
 picomatch@^2.0.4, picomatch@^2.2.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
@@ -1769,6 +1788,18 @@ util-deprecate@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+
+"v3-periphery-1_3_0@npm:@uniswap/v3-periphery@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@uniswap/v3-periphery/-/v3-periphery-1.3.0.tgz#37f0a1ef6025221722e50e9f3f2009c2d5d6e4ec"
+  integrity sha512-HjHdI5RkjBl8zz3bqHShrbULFoZSrjbbrRHoO2vbzn+WRzTa6xY4PWphZv2Tlcb38YEKfKHp6NPl5hVedac8uw==
+  dependencies:
+    "@openzeppelin/contracts" "3.4.1-solc-0.7-2"
+    "@uniswap/lib" "^4.0.1-alpha"
+    "@uniswap/v2-core" "1.0.1"
+    "@uniswap/v3-core" "1.0.0"
+    base64-sol "1.0.1"
+    hardhat-watcher "^2.1.1"
 
 which-module@^2.0.0:
   version "2.0.0"

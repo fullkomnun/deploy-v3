@@ -1,7 +1,6 @@
 import { program } from 'commander'
 import { Wallet } from '@ethersproject/wallet'
 import { JsonRpcProvider, TransactionReceipt } from '@ethersproject/providers'
-import { AddressZero } from '@ethersproject/constants'
 import { getAddress } from '@ethersproject/address'
 import fs from 'fs'
 import deploy from './src/deploy'
@@ -70,10 +69,8 @@ try {
   process.exit(1)
 }
 
-let v2CoreFactoryAddress: string
-if (typeof program.v2CoreFactoryAddress === 'undefined') {
-  v2CoreFactoryAddress = AddressZero
-} else {
+let v2CoreFactoryAddress: string | undefined
+if (typeof program.v2CoreFactoryAddress !== 'undefined') {
   try {
     v2CoreFactoryAddress = getAddress(program.v2CoreFactoryAddress)
   } catch (error) {
