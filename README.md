@@ -72,6 +72,24 @@ For testing the script, run `yarn start`.
 To publish the script, first create a version: `npm version <version identifier>`, then publish via `npm publish`.
 Don't forget to push your tagged commit!
 
+## Pre-deploy Additional Contracts
+
+You could use auxiliary scripts under `/scripts` to pre-deploy additional contract such as `WETH9` and `UniswapV2Factory` 
+
+Provide the following environment variables (possibly using `.env`):
+- `PRIVATE_KEY`
+- `RPC_URL`
+
+Run scripts to deploy:
+```sh
+$ node ./scripts/deployWETH9.js
+Deploying WETH9 contract...
+WETH9 deployed to: 0x61946Afc56309692dfc789A7319C129020Fb4C3C
+$ node ./scripts/deployV2CoreFactory.js
+UniswapV2Factory deployed at address: 0xcD3CeDa093CA9412EE33418C2FEf57aA632c1b7d
+FeeTo set to: 0x22640daf602aD4a9cabAEd54d7716A243b693262
+```
+
 ## FAQs
 
 ### How much gas should I expect to use for full completion?
