@@ -10,7 +10,7 @@
   "scripts": {
     "test": "mocha",
     "build": "NODE_OPTIONS=--openssl-legacy-provider ncc build index.ts -o dist -m",
-    "postbuild": "cat shebang.txt dist/index.js > dist/index.cmd.js && mv dist/index.cmd.js dist/index.js && cp WETH9_bytecode.txt dist/WETH9_bytecode.txt && cp deployWETH9.js dist/deployWETH9.js && cp deployV2Factory.js dist/deployV2Factory.js && cp extractState.js dist/extractState.js",
+    "postbuild": "cat shebang.txt dist/index.js > dist/index.cmd.js && mv dist/index.cmd.js dist/index.js",
     "prestart": "yarn build",
     "start": "NODE_OPTIONS=--openssl-legacy-provider  node dist/index.js",
     "prepublishOnly": "yarn build"
